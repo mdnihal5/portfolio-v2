@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/moving-border";
+import { Button } from "../ui/moving-border";
 // import Socials from "../Socials/Socials";
 import { Clipboard } from "lucide-react";
 import handleCopy from "./HandleCopy";

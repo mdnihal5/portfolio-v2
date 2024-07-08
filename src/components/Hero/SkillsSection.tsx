@@ -1,4 +1,4 @@
-import Skills from "@/components/Skills/Skills";
+import Skills from "../Skills/Skills";
 
 const SkillsSection = () => (
 	<div className="text-left space-y-6">

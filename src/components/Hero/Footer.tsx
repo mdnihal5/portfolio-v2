@@ -1,5 +1,5 @@
 import { RiDiscordLine, RiGithubLine, RiLinkedinFill } from "react-icons/ri";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
 import { Link } from "react-router-dom";
 const icons = [
     { icon: <RiGithubLine size={28} color="violet" />, delay: 0, link: "https://github.com/mdnihal5", name: "mdnihal5" },

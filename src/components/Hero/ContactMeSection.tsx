@@ -1,5 +1,5 @@
 import ContactMe from "./ContactMe";
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "../ui/separator";
 
 const ContactMeSection = () => (
     <div className="flex items-center justify-center flex-col">

@@ -3,7 +3,7 @@ import About from "./About";
 import SkillsSection from "./SkillsSection";
 import ProjectsSection from "./ProjectsSection";
 import ContactMeSection from "./ContactMeSection";
-import Resume from "@/components/Resume/Resume";
+import Resume from "../Resume/Resume";
 import Footer from "./Footer";
 
 const Hero = () => {
