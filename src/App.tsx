@@ -5,6 +5,7 @@ import { HeroHighlight } from "./components/ui/HeroHighlight";
 import { motion } from "framer-motion";
 import "./index.css";
 import AnimatedCursor from "react-animated-cursor";
+
 const App = () => {
   return (
     <>
