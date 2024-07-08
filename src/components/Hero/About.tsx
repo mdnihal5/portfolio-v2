@@ -1,14 +1,7 @@
 import { Button } from "../ui/moving-border";
+import Socials from "../Socials/Socials";
 import { Clipboard } from "lucide-react";
 import handleCopy from "./HandleCopy";
-
-// import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
-
-const icons = [
-    { icon: "github", delay: 0, link: "https://github.com/mdnihal5", name: "github" },
-    { icon: "linkdin", delay: 0.5, link: "https://linkedin.com/in/mdnihal05", name: "linkedin" },
-    { icon: "discord", delay: 1.5, link: "https://discord.com/users/997531619105714297", name: "discord" },
-];
 
 const About = () => {
     const date = new Date();
@@ -38,13 +31,7 @@ const About = () => {
                             <Clipboard />
                         </button>
                     </div>
-                    <div className="flex gap-3 mt-6 items-center justify-center">
-                        {icons.map((icon, key) => (
-                            <a href={icon.link} target="_blank" key={key}>
-                                {icon.icon}
-                            </a>
-                        ))}
-                    </div>
+                    <Socials />
                 </div>
                 <h2 className="font-condesed">
                     A passionate web developer and competitive programmer. I have a strong background in Mern-stack development, with expertise in modern web technologies and problem-solving. I'm
