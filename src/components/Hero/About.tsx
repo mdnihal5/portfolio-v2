@@ -2,14 +2,12 @@ import { Button } from "../ui/moving-border";
 import { Clipboard } from "lucide-react";
 import handleCopy from "./HandleCopy";
 
-import { RiDiscordLine, RiGithubLine, RiLinkedinFill } from "react-icons/ri";
-
 // import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
 
 const icons = [
-    { icon: <RiGithubLine size={28} />, delay: 0, link: "https://github.com/mdnihal5", name: "github" },
-    { icon: <RiLinkedinFill size={30} />, delay: 0.5, link: "https://linkedin.com/in/mdnihal05", name: "linkedin" },
-    { icon: <RiDiscordLine size={30} />, delay: 1.5, link: "https://discord.com/users/997531619105714297", name: "discord" },
+    { icon: "github", delay: 0, link: "https://github.com/mdnihal5", name: "github" },
+    { icon: "linkdin", delay: 0.5, link: "https://linkedin.com/in/mdnihal05", name: "linkedin" },
+    { icon: "discord", delay: 1.5, link: "https://discord.com/users/997531619105714297", name: "discord" },
 ];
 
 const About = () => {
@@ -41,8 +39,8 @@ const About = () => {
                         </button>
                     </div>
                     <div className="flex gap-3 mt-6 items-center justify-center">
-                        {icons.map((icon, index) => (
-                            <a href={icon.link} target="_blank" key={index}>
+                        {icons.map((icon, key) => (
+                            <a href={icon.link} target="_blank" key={key}>
                                 {icon.icon}
                             </a>
                         ))}
