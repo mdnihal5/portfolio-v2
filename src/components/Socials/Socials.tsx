@@ -31,18 +31,9 @@ const Socials: React.FC = () => {
 						},
 					}}
 				>
-					<TooltipProvider delayDuration={90}>
-						<Tooltip>
-							<TooltipTrigger>
-								<a href={icon.link} target="_blank" rel="noopener noreferrer" style={{ display: "block" }}>
-									{icon.icon}
-								</a>
-							</TooltipTrigger>
-							<TooltipContent className="bg-purple-300 pointer-events-none">
-								<p className="text-sm">{icon.name}</p>
-							</TooltipContent>
-						</Tooltip>
-					</TooltipProvider>
+					<a href={icon.link} target="_blank" rel="noopener noreferrer" style={{ display: "block" }}>
+						{icon.icon}
+					</a>
 				</motion.div>
 			))}
 		</div>
