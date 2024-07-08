@@ -10,7 +10,7 @@ const Socials: React.FC = () => {
 	return (
 		<div className="flex w-30 items-center justify-center mt-14 gap-4 relative">
 			{icons.map((icon, index) => (
-				<a href={icon.link} target="_blank" rel="noopener noreferrer" style={{ display: "block" }}>
+				<a key={index} href={icon.link} target="_blank" rel="noopener noreferrer" style={{ display: "block" }}>
 					{icon.icon}
 				</a>
 			))}
