@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { RiDiscordLine, RiGithubLine, RiLinkedinFill } from "react-icons/ri";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
+// import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
 
 const icons = [
 	{ icon: <RiGithubLine size={28} />, delay: 0, link: "https://github.com/mdnihal5", name: "github" },
