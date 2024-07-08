@@ -4,7 +4,7 @@ import Hero from "./components/Hero/Hero";
 import { HeroHighlight } from "./components/ui/HeroHighlight";
 import { motion } from "framer-motion";
 import "./index.css";
-
+import AnimatedCursor from "react-animated-cursor";
 const App = () => {
   return (
     <>
@@ -24,6 +24,7 @@ const App = () => {
           }}
           className="w-screen h-screen overflow-x-hidden overflow-y-scroll flex flex-col items-center"
         >
+          <AnimatedCursor innerSize={13} outerSize={35} innerScale={1} outerScale={1.2} />
           <Navbar />
           <Hero />
           <Toaster position="top-center" />
