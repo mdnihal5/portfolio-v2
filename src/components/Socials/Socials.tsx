@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { RiDiscordLine, RiGithubLine, RiLinkedinFill } from "react-icons/ri";
-
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
 
 const icons = [
@@ -35,11 +34,11 @@ const Socials: React.FC = () => {
 					<TooltipProvider delayDuration={90}>
 						<Tooltip>
 							<TooltipTrigger>
-								<a href={icon.link} target="_blank" rel="noopener noreferrer">
+								<a href={icon.link} target="_blank" rel="noopener noreferrer" style={{ display: "block" }}>
 									{icon.icon}
 								</a>
 							</TooltipTrigger>
-							<TooltipContent className="bg-purple-300">
+							<TooltipContent className="bg-purple-300 pointer-events-none">
 								<p className="text-sm">{icon.name}</p>
 							</TooltipContent>
 						</Tooltip>
