@@ -19,6 +19,7 @@ const Skills: React.FC = () => {
             { name: "Node.js", iconClass: "ci ci-nodejs" },
             { name: "MongoDB", iconClass: "ci ci-mongodb" },
             { name: "TypeScript", iconClass: "ci ci-ts" },
+            { name: "Redux", iconClass: "ci ci-redux" },
         ],
         competitiveProgramming: [
             { name: "LeetCode", icon: <SiLeetcode size={15} />, link: "https://leetcode.com/u/mdnihal05/" },
