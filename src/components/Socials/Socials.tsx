@@ -11,7 +11,7 @@ const Socials: React.FC = () => {
 	return (
 		<div className="flex w-30 items-center justify-center mt-14 gap-4 relative">
 			{icons.map((icon, index) => (
-				<TooltipProvider delayDuration={90}>
+				<TooltipProvider delayDuration={90} key={index}>
 					<Tooltip>
 						<TooltipTrigger>
 							<a href={icon.link} target="_blank" rel="noopener noreferrer" style={{ display: "block" }}>
