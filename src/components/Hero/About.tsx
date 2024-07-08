@@ -1,7 +1,8 @@
 import { Button } from "../ui/moving-border";
-import Socials from "../Socials/Socials";
+// import Socials from "../Socials/Socials";
 import { Clipboard } from "lucide-react";
 import handleCopy from "./HandleCopy";
+import AnimatedCursor from "react-animated-cursor";
 
 const About = () => {
     const date = new Date();
@@ -31,7 +32,7 @@ const About = () => {
                             <Clipboard />
                         </button>
                     </div>
-                    <Socials />
+                    {/*<Socials />*/}
                 </div>
                 <h2 className="font-condesed">
                     A passionate web developer and competitive programmer. I have a strong background in Mern-stack development, with expertise in modern web technologies and problem-solving. I'm
