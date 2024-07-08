@@ -2,7 +2,6 @@ import { Button } from "../ui/moving-border";
 // import Socials from "../Socials/Socials";
 import { Clipboard } from "lucide-react";
 import handleCopy from "./HandleCopy";
-import AnimatedCursor from "react-animated-cursor";
 
 const About = () => {
     const date = new Date();
