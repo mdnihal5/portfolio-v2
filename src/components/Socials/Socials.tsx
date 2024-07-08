@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/tooltip";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin, faDiscord } from "@fortawesome/free-brands-svg-icons";
 
 const icons = [
-	{ icon: "github", delay: 0, link: "https://github.com/mdnihal5", name: "github" },
-	{ icon: "linkdin", delay: 0.5, link: "https://linkedin.com/in/mdnihal05", name: "linkedin" },
-	{ icon: "discord", delay: 1.5, link: "https://discord.com/users/997531619105714297", name: "discord" },
+	{ icon: <FontAwesomeIcon icon={faGithub} size="lg" />, delay: 0, link: "https://github.com/mdnihal5", name: "github" },
+	{ icon: <FontAwesomeIcon icon={faLinkedin} size="lg" />, delay: 0.5, link: "https://linkedin.com/in/mdnihal05", name: "linkedin" },
+	{ icon: <FontAwesomeIcon icon={faDiscord} size="lg" />, delay: 1.5, link: "https://discord.com/users/997531619105714297", name: "discord" },
 ];
+
 const Socials: React.FC = () => {
 	return (
 		<div className="z-40 flex w-30 items-center justify-center mt-14 gap-4 ">
@@ -34,9 +36,9 @@ const Socials: React.FC = () => {
 					<TooltipProvider delayDuration={90}>
 						<Tooltip>
 							<TooltipTrigger>
-								<Link to={icon.link} target="_blank">
+								<a href={icon.link} target="_blank" rel="noopener noreferrer">
 									{icon.icon}
-								</Link>
+								</a>
 							</TooltipTrigger>
 							<TooltipContent className="bg-purple-300">
 								<p className="text-sm">{icon.name}</p>
@@ -48,4 +50,5 @@ const Socials: React.FC = () => {
 		</div>
 	);
 };
+
 export default Socials;
