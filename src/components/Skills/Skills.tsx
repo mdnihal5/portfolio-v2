@@ -1,65 +1,63 @@
 import React from "react";
 import { Link } from "react-router-dom";
-interface Skill {
-    name: string;
-    iconClass?: string;
-    icon?: any;
-    link?: string;
-}
 import { SiCodechef, SiCodeforces, SiLeetcode } from "react-icons/si";
 
-const Skills: React.FC = () => {
-    const skillsData = {
-        webDevelopment: [
-            { name: "HTML", iconClass: "ci ci-html" },
-            { name: "CSS", iconClass: "ci ci-css" },
-            { name: "JavaScript", iconClass: "ci ci-js" },
-            { name: "React", iconClass: "ci ci-react" },
-            { name: "Express", iconClass: "ci ci-expressjs" },
-            { name: "Node.js", iconClass: "ci ci-nodejs" },
-            { name: "MongoDB", iconClass: "ci ci-mongodb" },
-            { name: "TypeScript", iconClass: "ci ci-ts" },
-            { name: "Redux", iconClass: "ci ci-redux" },
-        ],
-        competitiveProgramming: [
-            { name: "LeetCode", icon: <SiLeetcode size={15} />, link: "https://leetcode.com/u/mdnihal05/" },
-            { name: "Codeforces", icon: <SiCodeforces size={15} />, link: "https://codeforces.com/profile/md_nihal" },
-            { name: "CodeChef", icon: <SiCodechef size={15} />, link: "https://www.codechef.com/users/rgukt_b192210" },
-        ],
-    };
+const Skills = () => {
+  const skillsData = {
+    competitiveProgramming: [
+      { name: "LeetCode", icon: <SiLeetcode />, link: "https://leetcode.com/u/mdnihal05/" },
+      { name: "Codeforces", icon: <SiCodeforces />, link: "https://codeforces.com/profile/md_nihal" },
+      { name: "CodeChef", icon: <SiCodechef />, link: "https://www.codechef.com/users/md_nihal" },
+    ],
+    technicalSkills: [
+      { name: "JavaScript", iconClass: "ci ci-js" },
+      { name: "TypeScript", iconClass: "ci ci-ts" },
+      { name: "C++", iconClass: "ci ci-cpp" },
+      { name: "HTML", iconClass: "ci ci-html" },
+      { name: "CSS", iconClass: "ci ci-css" },
+      { name: "React", iconClass: "ci ci-react" },
+      { name: "Express", iconClass: "ci ci-expressjs" },
+      { name: "Node.js", iconClass: "ci ci-nodejs" },
+      { name: "MongoDB", iconClass: "ci ci-mongodb" },
+      { name: "Redux", iconClass: "ci ci-redux" },
+    ],
+  };
 
-    const renderSkills = (skills: Skill[]) => {
-        return skills.map((skill, index) => (
+  const renderSkills = (skills:any) => (
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+      {skills.map((skill:any, index:any) => (
+        <div key={index} className="bg-gray-700 p-3 rounded-lg shadow flex items-center justify-center">
+          {skill.link ? (
+            <Link to={skill.link} target="_blank" rel="noopener noreferrer" className="flex items-center">
+              {skill.icon}
+              <span className="ml-2 text-sm">{skill.name}</span>
+            </Link>
+          ) : (
             <>
-                {skill.link ? (
-                    <Link to={skill?.link} target="_blank">
-                        <div key={index} className="flex justify-center gap-4 items-center p-2 bg-gray-900 rounded-lg shadow-md ring-2 ring-gray-700 ring-opacity-75">
-                            {skill?.icon}
-                            <span className="text-sm text-white">{skill.name}</span>
-                        </div>
-                    </Link>
-                ) : (
-                    <div key={index} className="flex justify-center gap-4 items-center p-2 bg-gray-900 rounded-lg shadow-md ring-2 ring-gray-700 ring-opacity-75">
-                        <i className={`${skill.iconClass}  text-3xl text-white`}></i>
-                        <span className="text-sm text-white">{skill.name}</span>
-                    </div>
-                )}
+              <i className={`${skill.iconClass} text-xl mr-2`} />
+              <span className="text-sm">{skill.name}</span>
             </>
-        ));
-    };
-
-    return (
-        <div className="grid gap-8">
-            <div>
-                <h3 className="text-2xl font-bold mb-4 "> {"-->"} Web Development</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">{renderSkills(skillsData.webDevelopment)}</div>
-            </div>
-            <div>
-                <h3 className="text-2xl font-bold mb-4"> {"-->"} DSA/Competitive Programming</h3>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-6">{renderSkills(skillsData.competitiveProgramming)}</div>
-            </div>
+          )}
         </div>
-    );
+      ))}
+    </div>
+  );
+
+  return (
+    <section id="skills" className="p-6 text-white rounded-lg border border-gray-700 my-3">
+      <h2 className="text-2xl font-bold mb-6 text-white">Skills</h2>
+
+      <div className="mb-8">
+        <h3 className="text-xl font-semibold mb-4 text-white">Competitive Programming</h3>
+        {renderSkills(skillsData.competitiveProgramming)}
+      </div>
+
+      <div>
+        <h3 className="text-xl font-semibold mb-4 text-white">Technical Skills</h3>
+        {renderSkills(skillsData.technicalSkills)}
+      </div>
+    </section>
+  );
 };
 
 export default Skills;
