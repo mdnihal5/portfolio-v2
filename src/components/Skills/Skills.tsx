@@ -12,8 +12,6 @@ const Skills = () => {
       { name: "JavaScript", iconClass: "ci ci-js" },
       { name: "TypeScript", iconClass: "ci ci-ts" },
       { name: "C++", iconClass: "ci ci-cpp" },
-      { name: "HTML", iconClass: "ci ci-html" },
-      { name: "CSS", iconClass: "ci ci-css" },
       { name: "React", iconClass: "ci ci-react" },
       { name: "Express", iconClass: "ci ci-expressjs" },
       { name: "Node.js", iconClass: "ci ci-nodejs" },
