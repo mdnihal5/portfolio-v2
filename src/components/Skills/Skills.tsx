@@ -20,9 +20,9 @@ const Skills = () => {
     ],
   };
 
-  const renderSkills = (skills:any) => (
+  const renderSkills = (skills: any) => (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-      {skills.map((skill:any, index:any) => (
+      {skills.map((skill: any, index: any) => (
         <div key={index} className="bg-gray-700 p-3 rounded-lg shadow flex items-center justify-center">
           {skill.link ? (
             <Link to={skill.link} target="_blank" rel="noopener noreferrer" className="flex items-center">
@@ -50,7 +50,7 @@ const Skills = () => {
       </div>
 
       <div>
-        <h3 className="text-xl font-semibold mb-4 text-white">Technical Skills</h3>
+        <h3 className="text-xl font-semibold mb-4 text-white">The Tools of My Trade</h3>
         {renderSkills(skillsData.technicalSkills)}
       </div>
     </section>

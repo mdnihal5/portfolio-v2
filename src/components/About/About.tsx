@@ -6,7 +6,7 @@ import Socials from "../Socials/Socials";
 
 export const About = () => {
   const [text] = useTypewriter({
-    words: ["Mern Stack Developer", "Competitive Programmer"],
+    words: ["Full Stack Developer", "Competitive Programmer"],
     loop: false,
   });
 
@@ -51,9 +51,9 @@ export const About = () => {
       </div>
       <div className="w-full text-center">
         <h1 className="text-xl font-bold text-orange-300">Hi, I'm Nihal.</h1>
-        <h1 className="text-2xl font-bold text-white py-2">
-          I am a{" "}
-          <span className="text-xl py-2 font-bold">
+        <h1 className="text-xl font-bold text-white py-2">
+          A{"  "}
+          <span className="text-xl py-2 font-bold inline-block ">
             <span className="text-[#FF0000]">{text}</span>
           </span>
         </h1>
