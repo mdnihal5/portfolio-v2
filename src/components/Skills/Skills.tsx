@@ -17,13 +17,18 @@ const Skills = () => {
       { name: "Node.js", iconClass: "ci ci-nodejs" },
       { name: "MongoDB", iconClass: "ci ci-mongodb" },
       { name: "Redux", iconClass: "ci ci-redux" },
+      { name: "Tailwind CSS", iconClass: "ci ci-tailwindcss" },
     ],
   };
 
   const renderSkills = (skills: any) => (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+    <div className="flex flex-wrap gap-4">
       {skills.map((skill: any, index: any) => (
-        <div key={index} className="bg-gray-700 p-3 rounded-lg shadow flex items-center justify-center">
+        <div
+          key={index}
+          className="bg-gray-700 p-3 rounded-lg shadow flex items-center justify-center whitespace-nowrap"
+          style={{ minWidth: 'max-content' }}
+        >
           {skill.link ? (
             <Link to={skill.link} target="_blank" rel="noopener noreferrer" className="flex items-center">
               {skill.icon}
@@ -37,8 +42,7 @@ const Skills = () => {
           )}
         </div>
       ))}
-    </div>
-  );
+    </div>);
 
   return (
     <section id="skills" className="p-6 text-white rounded-lg border border-gray-700 my-3">
