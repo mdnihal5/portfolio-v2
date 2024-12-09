@@ -45,7 +45,7 @@ export const About = () => {
             <div>
               <a
                 className="bg-white h-8 w-20 flex items-center justify-center rounded-lg font-bold text-xs hover:bg-gray-100 transition-colors duration-300"
-                href="https://drive.google.com/file/d/1rVZiskRom08hgKYwYPrT058SF80Izcuf/view"
+                href="https://drive.google.com/file/d/1Ab_lL38cavHioc5CRP_5HdkdRcc0eUGP/view"
                 target="_blank"
                 rel="noopener noreferrer"
               >
